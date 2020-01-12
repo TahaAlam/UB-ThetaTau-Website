@@ -10,11 +10,9 @@ import pic04 from '../assets/images/pic04.jpg'
 
 class Homepage extends React.Component {
     render() {
-        const siteTitle = "Gatsby Starter - Photon";
-
         return (
             <Layout>
-                <Helmet title="Gatsby Html5up - Open-Source app with Photon design" />
+                <Helmet title="UBThetaTau" />
 
                 <section id="one" className="main style1">
                     <div className="grid-wrapper">

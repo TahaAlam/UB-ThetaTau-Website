@@ -5,12 +5,11 @@ class Header extends React.Component {
         return (
             <section id="header">
                 <div className="inner">
-                    <span className="icon major fa-cloud"></span>
                     <h1>
-                        <a href="https://www.gatsbyjs.org/">Gatsby</a> Html5Up
+                        University at Buffalo Theta Tau | Mu Gamma Chapter
                     </h1>
                     <p>
-                        <a href="https://github.com/app-generator/gatsby-html5up-photon">Open-Source</a> app with Photon design
+                        A co-ed professional engineering fraternity
                     </p>
                     <ul className="actions">
                         <li><a href="#one" className="button scrolly">Discover</a></li>
