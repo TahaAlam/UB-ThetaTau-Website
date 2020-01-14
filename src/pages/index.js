@@ -18,10 +18,9 @@ class Homepage extends React.Component {
                     <div className="grid-wrapper">
                         <div className="col-6">
                             <header className="major">
-                                <h2>Lorem ipsum dolor adipiscing<br />
-                                amet dolor consequat</h2>
+                                <h2>Our Purpose</h2>
                             </header>
-                            <p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
+                            <p>The purpose of Theta Tau is to develop and maintain a high standard of professional interest among its members, and to unite them in a strong bond of fraternal fellowship.</p>
                         </div>
                         <div className="col-6">
                             <span className="image fit"><img src={pic01} alt="" /></span>
@@ -57,31 +56,31 @@ class Homepage extends React.Component {
                     <div className="grid-wrapper">
                         <div className="col-12">
                             <header className="major">
-                                <h2>Adipiscing amet consequat</h2>
+                                <h2>Our Pillars</h2>
                             </header>
-                            <p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
                         </div>
 
                         <div className="col-4">
                             <span className="image fit"><img src={pic02} alt="" /></span>
-                            <h3>Magna feugiat lorem</h3>
-                            <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+                            <h3>Brotherhood</h3>
+                            <p>We forge lifelong bonds of fraternal friendship, a journey that develops and delivers a network of lasting personal and professional relationships.  We foster an inviting, safe, and social environment in which our members become lifelong friends.</p>
                             <ul className="actions">
                                 <li><a href="#" className="button">More</a></li>
                             </ul>
                         </div>
                         <div className="col-4">
                             <span className="image fit"><img src={pic03} alt="" /></span>
-                            <h3>Magna feugiat lorem</h3>
-                            <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+                            <h3>Professionalism</h3>
+                            <p>We develop and nurture engineers with strong communication, problem-solving, collaboration, and leadership skills that we demonstrate in our profession, our community, and in our lives.</p>
                             <ul className="actions">
                                 <li><a href="#" className="button">More</a></li>
                             </ul>
                         </div>
+                        
                         <div className="col-4">
                             <span className="image fit"><img src={pic04} alt="" /></span>
-                            <h3>Magna feugiat lorem</h3>
-                            <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+                            <h3>Community Service</h3>
+                            <p>We are known for our service to our college, university and the larger community.  Our service projects create a unifying environment for learning and personal growth for our members.</p>
                             <ul className="actions">
                                 <li><a href="#" className="button">More</a></li>
                             </ul>
@@ -89,8 +88,43 @@ class Homepage extends React.Component {
 
                     </div>
                 </section>
+                <section id="four" className="main style1 special">
+                    <div className="grid-wrapper">
+                        <div className="col-12">
+                            <header className="major">
+                                <h2>Our E-Board</h2>
+                            </header>
+                        </div>
+                        <div className="col-2"> </div>
+                        <div className="col-4">
+                            <span className="image fit"><img src={pic02} alt="" /></span>
+                            <h3>Regent</h3>   
+                        </div>
+                        <div className="col-4">
+                            <span className="image fit"><img src={pic02} alt="" /></span>
+                            <h3>Vice-Regent</h3>   
+                        </div>
+                        <div className="col-2"> </div>
+                        <div className="col-3">
+                            <span className="image fit"><img src={pic02} alt="" /></span>
+                            <h3>Pledge Marshall</h3>   
+                        </div>
+                        <div className="col-3">
+                            <span className="image fit"><img src={pic02} alt="" /></span>
+                            <h3>Corresponding Secretary</h3>   
+                        </div>
+                        <div className="col-3">
+                            <span className="image fit"><img src={pic02} alt="" /></span>
+                            <h3>Treasurer</h3>   
+                        </div>
+                        <div className="col-3">
+                            <span className="image fit"><img src={pic02} alt="" /></span>
+                            <h3>Scribe</h3>   
+                        </div>
 
-                <section id="four" className="main style2 special">
+                    </div>
+                </section>
+                <section id="five" className="main style2 special">
                     <div className="container">
                         <header className="major">
                             <h2>Ipsum feugiat consequat?</h2>
