@@ -19,7 +19,7 @@ class Homepage extends React.Component {
     render() {
         return (
             <Layout>
-                <Helmet title="UBThetaTau" />
+                <Helmet title="UB Theta Tau" />
 
                 <section id="one" className="main style1">
                     <div className="grid-wrapper">
