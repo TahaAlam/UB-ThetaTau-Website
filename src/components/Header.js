@@ -1,9 +1,10 @@
 import React from 'react'
 
 class Header extends React.Component {
+    
     render() {
         return (
-            <section id="tintedheader">
+            <section id="tintedheader" className="section">
                 <div className="inner">
                     <h1>
                         University at Buffalo Theta Tau | Mu Gamma Chapter

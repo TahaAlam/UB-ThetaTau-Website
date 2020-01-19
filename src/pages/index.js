@@ -3,6 +3,8 @@ import Helmet from "react-helmet";
 
 import Layout from '../components/layout';
 
+import Instagram from '../components/Instagram';
+
 import purpose from '../assets/images/Purpose.jpg'
 import brotherhood from '../assets/images/Brotherhood.jpg'
 import pd from '../assets/images/ProfessionalDevelopment.jpg'
@@ -23,14 +25,14 @@ class Homepage extends React.Component {
 
                 <section id="one" className="main style1">
                     <div className="grid-wrapper">
-                        <div className="col-6">
+                        <div className="col-12">
                             <header className="major">
                                 <h2>Our Purpose</h2>
                             </header>
                             <p>The purpose of Theta Tau is to develop and maintain a high standard of professional interest among its members, and to unite them in a strong bond of fraternal fellowship.</p>
                         </div>
-                        <div className="col-6">
-                            <span className="image fit"><img src={purpose} alt="" /></span>
+                        <div className="col-12">
+                            <Instagram />
                         </div>
                     </div>
                 </section>
@@ -117,7 +119,7 @@ class Homepage extends React.Component {
                         </header>
                         <p>We will keep you updated.</p>
                         <ul className="actions uniform">
-                            <li><a href="#" className="button special">Sign Up</a></li>
+                            <li><a href="https://forms.gle/g8Gywj51FX8kb7Zv6" className="button special">Sign Up</a></li>
                             <li><a href="#" className="button">Learn More</a></li>
                         </ul>
                     </div>

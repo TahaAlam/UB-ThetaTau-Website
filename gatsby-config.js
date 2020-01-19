@@ -19,8 +19,16 @@ module.exports = {
         icon: 'src/assets/images/website-icon.png', // This path is relative to the root of the site.
       },
     },
+      {
+        resolve: `gatsby-source-instagram-all`,
+        options: {
+          access_token: 
+        }
+    },
     'gatsby-plugin-sass',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`
   ],
 }
