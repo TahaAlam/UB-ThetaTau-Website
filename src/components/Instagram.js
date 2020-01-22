@@ -2,6 +2,9 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
+import Carousel from 'nuka-carousel';
+
+
 
 const Instagram = () => (
   <StaticQuery
@@ -13,7 +16,7 @@ const Instagram = () => (
               link
               localImage {
                 childImageSharp {
-                  fluid(maxHeight: 500, maxWidth: 500 quality: 50) {
+                  fluid(quality: 50) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
@@ -34,11 +37,8 @@ const Instagram = () => (
       }
     `}
     render={(data) => (
-      <div style={{
-        marginBottom: '1rem',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-      }}>
+          <Carousel  withoutControls ={true} autoplay autoplayInterval={1000} wrapAround dragging
+  transitionMode="fade" easing={"easeExpOut"} speed={1000} >
         {
           data.allInstagramContent.edges.map((item, i) => (
             item.node.localImage ? (
@@ -51,13 +51,15 @@ const Instagram = () => (
                 >
                   <Image
                     fluid={item.node.localImage.childImageSharp.fluid}
+                    style={{ maxHeight: 'calc(50vh - 4rem)' }}
+                    imgStyle={{ objectFit: 'contain' }}
                   />
                 </a>
               </div>
             ) : (<div></div>)
           ))
         }
-      </div>
+        </Carousel>
     )}
   />
 );
