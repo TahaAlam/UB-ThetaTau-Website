@@ -29,9 +29,9 @@ class Template extends React.Component {
 
         return (
             <div className={`body ${this.state.loading}`}>
-                <Header />
+                
                 {children}
-                <Footer />
+          
             </div>
         );
     }

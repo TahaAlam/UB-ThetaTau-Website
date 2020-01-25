@@ -30,7 +30,7 @@
 
 	body {
 		background: _palette(bg);
-
+		
 		.body.is-loading {
 			*, *:before, *:after {
 				@include vendor('animation', 'none !important');
@@ -917,10 +917,11 @@
 
 	.main {
 		@include padding(6em, 0);
-
+		overflow-x: hidden;
+		
 		&.style1 {
 			background: black;
-			color:white;
+			color:white; 
 		}
 
 		&.style2 {
@@ -928,6 +929,10 @@
 			background-attachment:	fixed,							fixed;
 			background-image:		url('../images/overlay1.png'),		url('../images/header.jpg');
 			background-size:		auto,							cover;
+		}
+		&.style3 {
+			background-image: linear-gradient(to bottom right, #8b0000  ,  #FFD700);
+			color: black;
 		}
 		/* div.porfolio{{
 			marginBottom: 1rem,
@@ -948,7 +953,7 @@
 		overflow: hidden;
 		position: relative;
 		text-align: center;
-
+		height:100%;
 		h1 {
 			margin: 0;
 		}
