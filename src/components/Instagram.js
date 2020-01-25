@@ -46,7 +46,7 @@ const Instagram = () => (
                 <a
                   href={item.node.link}
                   target='_blank'
-                  rel='noopener'
+                  rel='noopener noreferrer'
                   tabIndex='0'
                 >
                   <Image

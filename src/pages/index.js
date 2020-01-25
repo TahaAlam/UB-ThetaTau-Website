@@ -39,19 +39,69 @@ import PM from '../assets/images/PM.jpg'
 import Scribe from '../assets/images/Scribe.jpg'
 
 class Homepage extends React.Component {
+
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          prevScrollpos: window.pageYOffset,
+          top: true,
+          scroll:false,
+        };
+      }
+
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll);
+      }
+      
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.handleScroll);
+      }
+     
+     handleScroll = () => {
+        const { prevScrollpos } = this.state;
+        const { top } = this.state;
+        const { scroll } = this.state;
+
+        const currentScrollPos = window.pageYOffset;
+        const visible = prevScrollpos > currentScrollPos;
+        if(top===true && scroll ===false){
+            console.log("scrolling");
+            this.setState({
+            top:false,
+            scroll:true
+        });
+        }
+       
+        if(window.pageYOffset===0 && top===false){
+            console.log("top");
+            this.setState({
+            scroll:false,
+            top:true
+        });
+        }
+            
+        this.setState({
+          prevScrollpos: currentScrollPos,
+          visible
+        });
+        
+      };
+      
     render() {
         return (
             <Layout>
                 <Helmet title="UB Theta Tau" />
            
-            <section id="tintedheader" className="section" style={{width:'100%',height:'100vh', box_sizing:'border-box'}}>
-                <div className="inner">
+            <section id={ this.state.scroll ? "tintedheader":"header"} className="section" style={{width:'100%',height:'100vh', box_sizing:'border-box'}}>
+                <div className="inner" style={{verticalAlign:'middle'}}>
                     <h1>
                         University at Buffalo Theta Tau | Mu Gamma Chapter
                     </h1>
                     <p>
                         A co-ed professional engineering fraternity
                     </p>
+                    
                     
                 </div>
             </section>
@@ -64,7 +114,7 @@ class Homepage extends React.Component {
                             </header>
                             <p>The purpose of Theta Tau is to develop and maintain a high standard of professional interest among its members, and to unite them in a strong bond of fraternal fellowship.</p>
                         </div>
-                        <div className="col-6">
+                        <div className="col-6" style={{alignContent:'center'}}>
                             <Instagram />
                         </div>
                     </div>
@@ -137,9 +187,10 @@ class Homepage extends React.Component {
                     <div className="grid-wrapper">
                     <div className="col-12">
                              <header className="major">
-                                <h2>Check out where our brother have been!</h2>
+                                <h2>Check out where our brothers have been!</h2>
                             </header>
-                            <table style= {{}} >                           
+                            <table style={{backgroundColor:'rgba(0, 0, 0, 0.0)'}}>    
+                                <tbody>                
                                     <tr style={{width:'20%'}} >
                                         <td style={{width:'20%'}} >
                                             <img src={c1} alt="Amazon" imgstyle={{ objectFit: 'contain' }} style={{width:'100%'}} />
@@ -208,6 +259,7 @@ class Homepage extends React.Component {
                                             <img src={c20} alt="Whiting Turning" imgstyle={{ objectFit: 'contain' }}  style={{width:'100%'}} />
                                         </td>
                                     </tr>
+                                    </tbody>
                             </table>              
                             </div>   
                          </div>        

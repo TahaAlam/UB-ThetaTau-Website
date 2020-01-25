@@ -953,6 +953,7 @@
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+		font-size: 0;
 		height:100%;
 		h1 {
 			margin: 0;
@@ -1030,7 +1031,7 @@
 	@include padding(9em, 0, (0,0,_size(element-margin),0));
 	@include dark(#4686a0);
 	background-attachment:	fixed,							fixed,							fixed;
-	background-image:	linear-gradient(	rgba(255, 0, 0, 0.45), 	rgba(0, 0, 255, 0.45)),	url('../images/overlay2.png'),		url('../images/overlay3.png');
+	background-image:	linear-gradient(	rgba(55, 0, 0, 0.75), 	rgba(212, 175, 55, 0.75)),	url('../images/overlay2.png'),		url('../images/overlay3.png');
 	background-position:	top left,						center center,					center center;
 	background-size:		auto,							cover,							cover;
 	overflow: hidden;
