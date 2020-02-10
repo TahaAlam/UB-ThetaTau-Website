@@ -48,14 +48,14 @@ import PM from '../assets/images/PM.jpg'
 import Scribe from '../assets/images/Scribe.jpg'
 
 class Homepage extends React.Component {
-
+   
     constructor(props) {
         super(props);
     
         this.state = {
           prevScrollpos: window.pageYOffset,
           top: true,
-          scroll:false,
+          scroll:false, 
         };
       }
 
@@ -97,9 +97,11 @@ class Homepage extends React.Component {
       
     render() {
         return (
+            
             <Layout>
                 <Helmet title="UB Theta Tau" />
-           
+            
+            
             <section id={ this.state.scroll ? "tintedheader":"header"} className="section" style={{width:'100%',height:'100vh', box_sizing:'border-box'}}>
                 <div className="inner" style={{verticalAlign:'middle'}}>
                     <h1>
