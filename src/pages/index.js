@@ -10,6 +10,15 @@ import brotherhood from '../assets/images/Brotherhood.jpg'
 import pd from '../assets/images/ProfessionalDevelopment.jpg'
 import commserv from '../assets/images/CommunityService.jpg'
 
+import event1 from '../assets/images/events/1.jpg'
+import event2 from '../assets/images/events/2.jpg'
+import event3 from '../assets/images/events/3.jpg'
+import event4 from '../assets/images/events/4.jpg'
+import event5 from '../assets/images/events/5.jpg'
+import event6 from '../assets/images/events/6.jpg'
+import event7 from '../assets/images/events/7.jpg'
+import event8 from '../assets/images/events/8.jpg'
+
 import c1 from '../assets/images/logos/amazon.png'
 import c2 from '../assets/images/logos/apple.png'
 import c3 from '../assets/images/logos/buffaloautomation.png'
@@ -39,14 +48,14 @@ import PM from '../assets/images/PM.jpg'
 import Scribe from '../assets/images/Scribe.jpg'
 
 class Homepage extends React.Component {
-
+   
     constructor(props) {
         super(props);
     
         this.state = {
           prevScrollpos: window.pageYOffset,
           top: true,
-          scroll:false,
+          scroll:false, 
         };
       }
 
@@ -66,7 +75,6 @@ class Homepage extends React.Component {
         const currentScrollPos = window.pageYOffset;
         const visible = prevScrollpos > currentScrollPos;
         if(top===true && scroll ===false){
-            console.log("scrolling");
             this.setState({
             top:false,
             scroll:true
@@ -74,7 +82,6 @@ class Homepage extends React.Component {
         }
        
         if(window.pageYOffset===0 && top===false){
-            console.log("top");
             this.setState({
             scroll:false,
             top:true
@@ -90,9 +97,11 @@ class Homepage extends React.Component {
       
     render() {
         return (
+            
             <Layout>
                 <Helmet title="UB Theta Tau" />
-           
+            
+            
             <section id={ this.state.scroll ? "tintedheader":"header"} className="section" style={{width:'100%',height:'100vh', box_sizing:'border-box'}}>
                 <div className="inner" style={{verticalAlign:'middle'}}>
                     <h1>
@@ -265,20 +274,58 @@ class Homepage extends React.Component {
                          </div>        
                 </section>
 
-                <section id="five" className="main style2 special">
-                    <div className="container">
-                        <header className="major">
-                            <h2>Interested in rushing?</h2>
-                        </header>
-                        <p>We will keep you updated.</p>
+                <section id="five" className="main style1 special">
+                    <div className="grid-wrapper">
+                        <div className="col-12">
+                            <header className="major">
+                                <h2>Interested in rushing? </h2>
+                            </header>
+                        </div>
+                      
+                        
+                        <div className="col-6">
+                            <span className="image fit"><img src={event1} alt="" /></span>
+                            <h6>Info Session 1 | NSC 215 | 7:00 PM January 30th</h6>
+                        </div>
+                        <div className="col-6">
+                            <span className="image fit"><img src={event2} alt="" /></span>
+                            <h6>Info Session 2 | NSC 215 | 7:00 PM January 31th</h6>
+                        </div>
+                        <div className="col-6">
+                            <span className="image fit"><img src={event3} alt="" /></span>
+                            <h6>Bob Ross Night | Norton 214 | 6:30 PM February 3rd</h6>
+                        </div>
+                        <div className="col-6">
+                            <span className="image fit"><img src={event4} alt="" /></span>
+                            <h6>Get To Know Us | Norton 214 | 7:00 PM February 4th</h6>
+                        </div>
+                        <div className="col-6">
+                            <span className="image fit"><img src={event5} alt="" /></span>
+                            <h6> Speed Interviews | Norton 214 | 7:00 PM February 5th</h6>
+                        </div>
+                        <div className="col-6">
+                            <span className="image fit"><img src={event6} alt="" /></span>
+                            <h6>Bowling | Tonawonda Bowling Center | 7:00 PM February 6th</h6>
+                        </div>
+                        <div className="col-6">
+                            <span className="image fit"><img src={event7} alt="" /></span>
+                            <h6>Yard Games | SU 210 | 7:00 PM February 7th</h6>
+                        </div>
+                        <div className="col-6">
+                            <span className="image fit"><img src={event8} alt="" /></span>
+                            <h6>Bid Interviews | NSC 201 | 10:00 AM February 8th</h6>
+                        </div>
+                        <div className="col-12">
+                        <p>Sign up to get updates!</p>
                         <ul className="actions uniform">
                             <li><a href="https://forms.gle/g8Gywj51FX8kb7Zv6" className="button special">Sign Up</a></li>
                         </ul>
                     </div>
-                    <ul className="icons">
-                       <li><a href="https://github.com/app-generator/gatsby-html5up-photon" className="icon alt fa-github"><span className="label">GitHub</span></a></li>
-                      <li><a href="https://twitter/webappseed" className="icon alt fa-twitter"><span className="label">Twitter</span></a></li>
+                    <ul className="icons col-12">
+                       <li><a href="https://www.facebook.com/mgthetatau/" className="icon alt fa-facebook"><span className="label">Facebook</span></a></li>
+                       <li><a href="https://www.instagram.com/ub_theta_tau/" className="icon alt fa-instagram"><span className="label">Instagram</span></a></li>
                     </ul>
+                    </div>
                 </section>
                 </Layout>
         );
